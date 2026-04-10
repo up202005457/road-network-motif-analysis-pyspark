@@ -1,6 +1,6 @@
-# Road Network Motif Analysis with PySpark
+# Road Network Graph & Motif Analysis with PySpark
 
-Large-scale graph analysis project using PySpark to identify structural patterns in road networks, with focus on degree distribution, connected components, and motif detection (paths and triangles).
+Large-scale graph analytics project using PySpark to identify structural patterns in road networks, focusing on degree distribution, connectivity, and motif detection (paths and triangles).
 
 ## Project Highlights
 
@@ -94,34 +94,20 @@ The analysis follows these main steps:
 
 ## Key Insights
 
-- Road networks exhibit sparse connectivity with low average node degree  
-- Most nodes represent simple intersections with limited connections  
-- Large connected components dominate both networks  
-- Triangle motifs are relatively limited compared to social networks  
-- California shows a higher number of triangle motifs than Texas  
+- Road networks exhibit sparse connectivity, with most nodes having low degree (2–4 connections)
+- The majority of intersections are simple (non-hub nodes), reflecting real-world road constraints
+- Large connected components dominate both networks, indicating high overall reachability
+- Triangle motifs are relatively rare, unlike social networks, due to planar constraints
+- California shows a higher triangle count than Texas, suggesting slightly higher local clustering  
 
 ---
 
 ## Example Outputs
 
-### Triangle Motif Comparison
-Shows the number of triangle motifs detected in each network.
-
-![Triangle Comparison](images/triangle_comparison_ca_tx.png)
-
----
-
 ### Degree Distribution — California vs Texas
 Compares normalized degree distributions across both networks.
 
 ![Degree Distribution Comparison](images/degree_distribution_ca_tx.png)
-
----
-
-### Connected Components
-Shows the size of the largest connected components.
-
-![Connected Components](images/connected_components.png)
 
 ---
 
@@ -131,6 +117,21 @@ Illustrates how node connectivity is distributed in the California network.
 ![Degree Distribution CA](images/degree_distribution_ca.png)
 
 ---
+
+### Largest Connected Components
+Shows the size of the largest connected components.
+
+![Connected Components](images/connected_components.png)
+
+---
+
+### Triangle Motif Comparison
+Shows the number of triangle motifs detected in each network.
+
+![Triangle Comparison](images/triangle_comparison_ca_tx.png)
+
+---
+
 
 ## How to Run
 
